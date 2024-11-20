@@ -12,7 +12,7 @@ jobs:
   build-production-images:
     uses: ./.github/workflows/service_docker-build-and-publish.yml
     with:
-      registry-repositories: "docker.io/serversideup/php,ghcr.io/serversideup/php"
+      registry-repositories: "ghcr.io/mplus-software/serversideup-php"
       tag-prefix: ''
       release-type: "latest"
     secrets: inherit

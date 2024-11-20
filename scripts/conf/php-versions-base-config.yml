@@ -1,53 +1,16 @@
 php_versions:
   - major: "7"
     minor_versions:
-      - minor: "7.4"
+      - minor: "7.2"
         base_os:
-          - name: alpine
-          - name: bullseye
+          - name: buster
             default: true
         patch_versions:
-          - 7.4.33
-  - major: "8"
-    minor_versions:
-      - minor: "8.0"
-        base_os:
-          - name: alpine
-          - name: bullseye
-            default: true
-        patch_versions:
-          - 8.0.30
-      - minor: "8.1"
-        base_os:
-          - name: alpine
-          - name: bookworm
-            default: true
-        patch_versions:
-          # - 8.1.28 # Pull latest from Official PHP source
-      - minor: "8.2"
-        base_os:
-          - name: alpine
-          - name: bookworm
-            default: true
-        patch_versions:
-        #   - 8.2.18 # Pull latest from Official PHP source
-      - minor: "8.3"
-        base_os:
-          - name: alpine
-          - name: bookworm
-            default: true
-        patch_versions:
-        #   - 8.3.6 # Pull latest from Official PHP source
+          - 7.2.34
 php_variations:
   - name: cli
     default: true
   - name: fpm
   - name: fpm-apache
     supported_os: # Open a discussion on serversideup/php if you want to see Alpine support for fpm-apache (https://github.com/serversideup/docker-php/discussions/66)
-      - bullseye
-      - bookworm
-  - name: fpm-nginx
-  - name: unit
-    supported_os: # Alpine with Unit is not supported yet. Submit a PR if you can help (https://github.com/serversideup/docker-php/issues/233)
-      - bullseye
-      - bookworm
+      - buster
